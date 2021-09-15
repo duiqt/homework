@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+	char Ten[20];	char Ho[20];
+	char Ten_dem[20];
+	char Ten_dem_mot[20],Ten_dem_hai[20],Ten_dem_ba[20];
+	char ch,ch2;
+	int a;
+	
+	printf("\n	.Thong tin ca nhan.\n");
+	
+	printf("\n Ban co ten dem khong?(y/n): ");
+	ch = getchar();
+	
+	fflush(stdin);
+	
+	switch (ch){
+		case 'N':
+		case 'n':
+			printf("\n Vui long nhap ten cua ban: ");scanf("%s",Ten);
+			printf("\n Vui long nhap ho cua ban: ");scanf("%s",Ho);
+			printf("\n Ten cua ban co phai la: %s %s?",Ho,Ten);break;
+		case 'Y':
+		case 'y':
+			printf("\n Ban co bao nhieu ten dem?(1-3): ");
+			ch2=getchar();
+			
+			fflush(stdin);
+			
+			switch (ch2){
+				case '1':
+					printf("\n Vui long nhap ten cua ban: ");	scanf("%s",&Ten);
+					printf("\n Vui long nhap ten dem cua ban: ");	scanf("%s",&Ten_dem);
+					printf("\n Vui long nhap ho cua ban: ");	scanf("%s",&Ho); fflush(stdin);
+					printf("\n Ten cua ban co phai la: %s %s %s?",Ho,Ten_dem,Ten);break;
+				case '2':
+					printf("\n Vui long nhap ten cua ban: ");	scanf("%s",&Ten);
+					printf("\n Vui long nhap ten dem thu nhat cua ban (tu trai qua phai): ");	scanf("%s",&Ten_dem_mot);
+					printf("\n Vui long nhap ten dem thu hai cua ban (tu trai qua phai): ");	scanf("%s",&Ten_dem_hai);
+					printf("\n Vui long nhap ho cua ban: ");	scanf("%s",&Ho);
+					printf("\n Ten cua ban co phai la: %s %s %s %s?",Ho,Ten_dem_mot,Ten_dem_hai,Ten);break;
+				case '3':
+					printf("\n Vui long nhap ten cua ban: ");	scanf("%s",&Ten);
+					printf("\n Vui long nhap ten dem thu nhat cua ban (tu trai qua phai): ");	scanf("%s",&Ten_dem_mot);
+					printf("\n Vui long nhap ten dem thu hai cua ban (tu trai qua phai): ");	scanf("%s",&Ten_dem_hai);
+					printf("\n Vui long nhap ten dem thu ba cua ban (tu trai qua phai): ");	scanf("%s",&Ten_dem_ba);
+					printf("\n Vui long nhap ho cua ban: ");	scanf("%s",&Ho);
+					printf("\n Ten cua ban co phai la: %s %s %s %s %s?",Ho,Ten_dem_mot,Ten_dem_hai,Ten_dem_ba,Ten);break;
+				}
+		}
+	}
